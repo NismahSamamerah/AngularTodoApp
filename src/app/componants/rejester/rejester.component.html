@@ -1,0 +1,14 @@
+
+<div class="container">
+  <header>
+    <h1>Rejester</h1>
+  </header>
+  <input type="text" placeholder="First Name" #FnameRef><br>
+  <input type="text" placeholder="Last Name" #LnameRef><br>
+  <input type="number" placeholder="age" #ageRef><br>
+  <input type="text" placeholder="Email" #emailRef><br>
+  <input type="text" placeholder="Password" #passRef><br>
+  <input type="text" placeholder="confirm your password"><br>
+  <!-- <smal><a>login If you have already an account</a></smal> -->
+  <button (click)="saveData(FnameRef.value) ">Rejester</button>
+</div>

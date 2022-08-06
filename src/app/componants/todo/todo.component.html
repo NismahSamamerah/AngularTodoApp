@@ -1,0 +1,18 @@
+<div class="container">
+  <header>
+    <h2>TODO APP</h2>
+  </header>
+  <h3>TODO Items :</h3>
+  <div class="form">
+    <input type="text" placeholder="Add Todo ..." [(ngModel)]="inputVal" [class.border-red]="isValidData" #InputRef>
+    <button (click)="addItem(InputRef.value)">Add</button>
+  </div>
+  <div class="todo-list" >
+    <ul *ngFor="let item of todos;index as index">
+      <li>
+        {{index+1}} -- {{item}} <button (click)="removeItem(item)">Delete</button>
+      </li>
+    </ul>
+  </div>
+
+</div>
