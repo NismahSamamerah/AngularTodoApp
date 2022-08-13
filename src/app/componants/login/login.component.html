@@ -1,0 +1,14 @@
+
+<form>
+<div *ngIf="loggedIn" class="container">
+  <header>
+    <h1>Login</h1>
+    <hr>
+  </header>
+  <input type="text" placeholder="Email" #email ><br>
+  <input type="text" placeholder="Password" #password><br>
+  <span *ngIf="errorMessege">*{{errorMessege}}</span><br><br>
+  <button (click)="login(email , password)">login</button><br>
+  <a href="#">create a new account ?</a>
+</div>
+</form>

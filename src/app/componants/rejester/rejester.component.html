@@ -1,14 +1,44 @@
-
+<form >
 <div class="container">
-  <header>
-    <h1>Rejester</h1>
-  </header>
-  <input type="text" placeholder="First Name" #FnameRef><br>
-  <input type="text" placeholder="Last Name" #LnameRef><br>
-  <input type="number" placeholder="age" #ageRef><br>
-  <input type="text" placeholder="Email" #emailRef><br>
-  <input type="text" placeholder="Password" #passRef><br>
-  <input type="text" placeholder="confirm your password"><br>
-  <!-- <smal><a>login If you have already an account</a></smal> -->
-  <button (click)="saveData(FnameRef.value) ">Rejester</button>
+<header>
+    <h1>Create an Account</h1>
+    <hr>
+</header>
+  <input  type="text" placeholder="First Name"   #FnameRef required><br>
+  <span *ngIf="FirstNameError">*{{FirstNameError}}</span><br>
+
+  <input type="text" placeholder="Last Name"  #LnameRef><br>
+  <span *ngIf="LastNameError">*{{LastNameError}}</span><br>
+
+  <input type="number" placeholder="age"  #age><br>
+  <span *ngIf="AgeError">*{{AgeError}}</span><br>
+
+      <select class="custom-select" name="gender" #gender >
+        <option value="0" id="option1">Select gender:</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+      </select><br>
+      <span *ngIf="GenderError">*{{GenderError}}</span><br>
+
+  <input type="text" placeholder="Email"  #email><br>
+  <span *ngIf="EmailError">{{EmailError}}</span><br>
+
+  <input type="text" placeholder="Password"  #pass><br>
+  <span *ngIf="PasswordError">*{{PasswordError}}</span><br>
+
+  <input type="text" placeholder="confirm your password"  #confirmPass><br>
+  <span *ngIf="PasswordConfirmError">*{{PasswordConfirmError}}</span><br>
+
+  <button (click)="addUser(
+    FnameRef,
+    LnameRef,
+    gender,
+    age ,
+    email ,
+    pass,
+    confirmPass )">Rejester</button>
+  <!-- <button (click)="loadData()">get data</button> -->
 </div>
+
+</form>
+

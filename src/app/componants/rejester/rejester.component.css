@@ -1,27 +1,56 @@
 .container{
   width: 500px;
-  height: 550px;
-  margin: auto;
-  background-color: rgb(132, 127, 255);
+  min-height: 650px;
+  margin-left: 500px;
+  margin-top: -160px;
+  background-color: rgb(229, 225, 225);
   text-align: center;
+  border-radius: 20px;
 }
 .container header{
-  padding: 20px 20px;
-  color: white;
+  padding: 12px 10px;
+  color: rgb(47, 47, 47);
   text-align: center;
 }
+
 input {
   width: 70%;
   height: 18px;
-  padding: 10px 10px;
-  margin: 10px 10px;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: none;
 }
 button{
   margin:auto;
   margin-top: 10px;
-  background-color: rgb(72, 90, 102);
-  padding: 10px 30px;
+  background-color: rgb(255, 122, 51);
+  padding: 10px 50px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-weight: 700;
+}
+button:hover{
+  background-color: rgb(249, 132, 69);
+  letter-spacing: 1px;
+
+}
+.fail {
+  border-color: 2px solid rgb(176, 7, 7);
+}
+select{
+  padding: 10px 10px;
+  margin: 20px;
+  margin-right:150px ;
+  height: 35px;
+  width: 45%;
+  border-radius: 10px;
+  border: none;
+}
+span{
+  padding-top: 50px;
+  font-size: 14px;
+  color: brown;
 }
 

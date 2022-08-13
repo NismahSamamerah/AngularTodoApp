@@ -1,34 +1,125 @@
 .container {
-  width: 600px;
-  min-height: 250px;
-  background-color: rgb(243, 241, 241);
+  background-color: rgb(253, 253, 253);
   margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.content{
+width: 80%;
+margin: auto;
+padding: 20px 0;
 }
 header {
   text-align: center;
-  background-color: rgb(54, 81, 198);
-  padding: 10px 20px;
-  font-family: Arial;
-  color: white;
+  background-color: rgb(214, 211, 210);
+  color: rgb(85, 82, 82);
+
+}
+.headerContent{
+  width: 80%;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+h3{
+  font-size: 20px;
+}
+span{
+  color: rgb(229, 96, 24);
+  transition: 0.6s;
+}
+span:hover{
+  transform: scale(1.1);
 }
 .form {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
+  width: 800px;
+display: flex;
+justify-content: space-around;
+  margin-left: 20px;
 }
 .form input{
-  width: 40%;
-  padding: 5px 15px;
-}
-.border-red{
-  border: 2px solid rgb(190, 5, 5);
+  display: block;
+  margin: 20px 7px;
+  margin-left: 260px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  border-radius: 4px 0 0 4px;
+  box-sizing: border-box;
+  width: 330px;
 }
 .form button{
-  padding: 5px 15px;
-  width: 10%;
-  background-color: rgb(54, 81, 198);
+  border: 1px solid rgb(229, 96, 24);
+    background: rgb(229, 96, 24);
+    padding: 10px 30px;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    min-width: 100px;
+    margin: 20px 0;
+    transition: 0.6s;
+}
+.form button:hover{
+  background-color: rgb(255, 89, 0);
+  transform: scale(1.05);
+}
+.border-red{
+  border: 1px solid red;
+}
+section{
+  padding: 10px 0px;
+}
+
+ul{
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
 }
 li{
+  display: flex;
+
+  justify-content: space-between;
   list-style: none;
+  height: 30px;
+  margin: 20px 10px;
+}
+.ItemText{
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  font-size: 25px;
+}
+p{
+      width: 20%;
+    font-size: 20px;
+}
+.btns{
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+}
+.btns button{
+  background: rgb(229, 96, 24);
+    border: 1px solid rgb(229, 96, 24);
+    padding: 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.btns button:hover{
+  background-color: rgb(255, 89, 0);
+  transform: scale(1.05);
+}
+.NoTodos{
+  font-size: 15px;
+  text-align: center;
+  margin: auto;
+  color: rgb(162, 159, 159);
+}
+.search{
+  margin-left: 30px;
+  width: 20%;
+  height: 30px;
+  margin-top: 10px;
 }

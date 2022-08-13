@@ -1,18 +1,60 @@
+
 <div class="container">
   <header>
-    <h2>TODO APP</h2>
-  </header>
-  <h3>TODO Items :</h3>
-  <div class="form">
-    <input type="text" placeholder="Add Todo ..." [(ngModel)]="inputVal" [class.border-red]="isValidData" #InputRef>
-    <button (click)="addItem(InputRef.value)">Add</button>
+    <div class="headerContent">
+    <h2>To<span>Do</span> List</h2>
+    <div class="form">
+      <input type="text" placeholder="Add Todo ..." [(ngModel)]="inputVal"  #newTask>
+      <button *ngIf="addNew;" (click)="addItem(newTask.value )" >Add New Task</button>
+      <button *ngIf="!addNew;" (click)="addItem(newTask.value)">Edit Task</button>
+
+      <!-- <ng-template #Update><button  (click)="EditTask(para)">Edit Task</button></ng-template> -->
+    </div>
+
   </div>
-  <div class="todo-list" >
-    <ul *ngFor="let item of todos;index as index">
-      <li>
-        {{index+1}} -- {{item}} <button (click)="removeItem(item)">Delete</button>
+  </header>
+<input type="text" class="search" placeholder="search" (keyup)="search()" [(ngModel)]="searchVal" >
+  <div class="content">
+    <section class="todoList ">
+  <h3>TO DO </h3>
+<hr color="lightgray">
+<div *ngIf="todos.length; else Notodos">
+
+    <ul *ngFor="let item of todos; index as index">
+      <li #itemRef  >
+        <div class="ItemText">
+        <span (click)= "move()"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span>
+        <span #text  style="font-size: 20px; color :black;" [(ngModel)]="TodoContent">
+          {{item}}
+        </span>
+    </div>
+        <div class="btns">
+          <button (click)="updateItem(text)">Edit</button>
+          <span (click)="removeItem(itemRef)" style="color: brown; font-weight: bolder; font-size: 30px; cursor: pointer;" ><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+      </div>
       </li>
     </ul>
   </div>
+  <ng-template #Notodos >
+    <p class="NoTodos">No To Do Item yet</p>
+  </ng-template>
+</section>
 
+<section class="inProgres">
+  <h3> IN Progress </h3>
+  <hr color="lightgray">
+  <ul >
+
+    <li>
+
+
+    </li>
+  </ul>
+</section>
+
+<section class="done">
+  <h3>Done </h3>
+  <hr color="lightgray">
+
+</section>
 </div>

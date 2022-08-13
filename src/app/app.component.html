@@ -1,2 +1,27 @@
-<app-rejester></app-rejester>
+
+<div *ngIf="!isVisibleTodo ;else todo " >
+
+  <div class="btns">
+    <h2> Welcome to the <span>TODO </span>Application ..</h2>
+    <button (click)="showRegisterPage()">Register Now !</button><br>
+    <button (click)="showLoginPage()">click here if already have an account !</button>
+  </div>
+  <div *ngIf="isVisibleRegester">
+    <app-rejester></app-rejester>
+  </div>
+  <div *ngIf="isVisibleLogin">
+    <app-login></app-login>
+  </div>
+</div>
+
+<ng-template #todo>
+  <div >
+    <app-todo></app-todo>
+    <button (click)="showLoginPage()" style="width: 100px; border:1px solid gray ; margin-top:30px" >Logout</button>
+  </div>
+</ng-template>
+
+
+
+
 
